@@ -1,0 +1,38 @@
+<html> 
+<head>
+<script>
+    var object1 = {
+        name : 'hong',
+        age : '35',
+        birthday : '19840912',
+        method1 : function(){
+            alert(this.name)
+        }
+    };
+
+
+    var output = '';
+    for(var key in object1){
+        output += 'key : ' + key + ' : ' + object1[key] + '\n';
+    }
+    alert(output);
+    //object1.method1();
+
+    output = '';
+    var student = {
+        이름 : '연하진',
+        국어 : 92, 수학 : 98,
+        영어 : 96, 과학 : 98
+    };
+
+    //in
+    //이름이라는 element가 student클래스 안에 존재하는가?
+    output +=  ('이름' in student);
+
+    
+
+</script>
+
+</head>
+<body></body>
+</html>
