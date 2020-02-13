@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        function makeStudent(name, korean, math, english, science) {
+
+            var classReturn = {
+                이름: name,
+                국어: korean,
+                수학: math,
+                영어: english,
+                과학: science,
+
+                getSum: function () {
+                    return this.국어 + this.수학 + this.영어 + this.과학;
+                },
+                getAverage: function () {
+                    return this.getSum() / 4
+                },
+                getString: function () {
+                    return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage();
+
+                }
+            }
+            return classReturn;
+        }
+
+        var students = [];
+        students.push(makeStudent('윤인성', 87, 98, 88, 95));
+        students.push(makeStudent('연하진', 87, 98, 88, 95));
+
+        var output = '이름\t총점\t평균\n';
+        for (var i in students) {
+            with(students[i]){
+                output += getString() + '\n';
+            }
+
+        }
+
+        alert(output);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
