@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var num1 = 273;
+        var num2 = new Number(273);
+
+        var output = '';
+        output += '1 ' + typeof (num1) + '\n' //결과 number
+        output += '2 ' + typeof (num2) + '\n' //결과 object
+
+        alert(output);
+
+        if (typeof (num1) == 'number') { //결과 true
+            alert('number type');
+        }
+        if (typeof (num2) == 'number') { //결과 false
+            alert('number2 type');
+        }
+
+
+        //Number타입의 생성자 함수인지 확인
+        if (num1.constructor == Number) { //result true
+            alert('NUMBER TRUE');
+        }
+
+        if (num2.constructor == Number) { //result true
+            alert('NUMBER2 TRUE');
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
